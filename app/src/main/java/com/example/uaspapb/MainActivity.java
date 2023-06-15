@@ -74,8 +74,6 @@ public class MainActivity extends AppCompatActivity {
                             String text = "";
                             for( int o =0; o < listData.size(); o++){
                                 if (currentTime.compareTo(listData.get(o).getTime()) >= 0 && currentTime.compareTo(listData.get(o+1).getTime()) <= 0) {
-                                    int j = o+1;
-
                                     text = listData.get(o).getWhat();
                                 }
                             }
