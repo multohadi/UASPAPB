@@ -27,6 +27,7 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 import java.util.Locale;
+
 public class MainActivity extends AppCompatActivity {
     private String url = "https://mgm.ub.ac.id/todo.php";
     private RecyclerView rctodo;
