@@ -5,6 +5,6 @@ Seorang mahasiswa dalam kegiatan sehari-harinya merasa kesulitan dalam mencatat 
 ## soal
 Buat prototype aplikasi Android
 
-'''
-Gunakan Volley, Thread, dan RecyclerView. 
-'''
+`CLUE : Gunakan Volley, Thread, dan RecyclerView.`
+
+## Screnshoot
