@@ -8,3 +8,5 @@ Buat prototype aplikasi Android
 `CLUE : Gunakan Volley, Thread, dan RecyclerView.`
 
 ## Screnshoot
+
+<img src="https://github.com/multohadi/UASPAPB/blob/master/Screenshot1.png" alt="Deskripsi gambar" width="400" height="800"/>
