@@ -19,8 +19,12 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
+import java.util.Locale;
+
 
 public class MainActivity extends AppCompatActivity {
     private String url = "https://mgm.ub.ac.id/todo.php";
@@ -64,10 +68,31 @@ public class MainActivity extends AppCompatActivity {
 
                     }
 
+                    Calendar calendar = Calendar.getInstance();
+                    SimpleDateFormat sdf = new SimpleDateFormat("HH:mm", Locale.getDefault());
+                    String currentTime = sdf.format(calendar.getTime());
+
+                    if (currentTime.compareTo("04:10") >= 0 && currentTime.compareTo("05:10") <= 0){
+                        jadwal.setText(listData.get(0).getWhat());
+                    }if (currentTime.compareTo("06:10") >= 0 && currentTime.compareTo("08:30") <= 0){
+                        jadwal.setText(listData.get(1).getWhat());
+                    }if (currentTime.compareTo("08:40") >= 0 && currentTime.compareTo("11:58") <= 0){
+                        jadwal.setText(listData.get(2).getWhat());
+                    }if (currentTime.compareTo("11:59") >= 0 && currentTime.compareTo("13:24") <= 0){
+                        jadwal.setText(listData.get(3).getWhat());
+                    }if (currentTime.compareTo("13:25") >= 0 && currentTime.compareTo("17:59") <= 0){
+                        jadwal.setText(listData.get(0).getWhat());
+                    }if (currentTime.compareTo("18:00") >= 0 && currentTime.compareTo("21:09") <= 0){
+                        jadwal.setText(listData.get(0).getWhat());
+                    }if (currentTime.compareTo("21:10") >= 0 && currentTime.compareTo("04:09") <= 0){
+                        jadwal.setText(listData.get(0).getWhat());
+                    }
+
                     LinearLayoutManager linearLayoutManager = new LinearLayoutManager(MainActivity.this, LinearLayoutManager.VERTICAL, false);
                     rctodo.setLayoutManager(linearLayoutManager);
 
                     adapterdata = new adapter(MainActivity.this, listData);
+
                     rctodo.setAdapter(adapterdata);
                     adapterdata.notifyDataSetChanged();
 
