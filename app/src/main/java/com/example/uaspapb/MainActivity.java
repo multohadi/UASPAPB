@@ -72,26 +72,12 @@ public class MainActivity extends AppCompatActivity {
                             SimpleDateFormat sdf = new SimpleDateFormat("HH:mm", Locale.getDefault());
                             String currentTime = sdf.format(calendar.getTime());
                             String text = "";
-                            if (currentTime.compareTo("04:10") >= 0 && currentTime.compareTo("05:10") <= 0) {
-                                text = listData.get(0).getWhat();
-                            }
-                            if (currentTime.compareTo("06:10") >= 0 && currentTime.compareTo("08:30") <= 0) {
-                                text = listData.get(1).getWhat();
-                            }
-                            if (currentTime.compareTo("08:40") >= 0 && currentTime.compareTo("11:58") <= 0) {
-                                text = listData.get(2).getWhat();
-                            }
-                            if (currentTime.compareTo("11:59") >= 0 && currentTime.compareTo("13:24") <= 0) {
-                                text = listData.get(3).getWhat();
-                            }
-                            if (currentTime.compareTo("13:25") >= 0 && currentTime.compareTo("17:59") <= 0) {
-                                text = listData.get(0).getWhat();
-                            }
-                            if (currentTime.compareTo("18:00") >= 0 && currentTime.compareTo("21:09") <= 0) {
-                                text = listData.get(0).getWhat();
-                            }
-                            if (currentTime.compareTo("21:10") >= 0 && currentTime.compareTo("04:09") <= 0) {
-                                text = listData.get(0).getWhat();
+                            for( int o =0; o < listData.size(); o++){
+                                if (currentTime.compareTo(listData.get(o).getTime()) >= 0 && currentTime.compareTo(listData.get(o+1).getTime()) <= 0) {
+                                    int j = o+1;
+
+                                    text = listData.get(o).getWhat();
+                                }
                             }
                             Message msg = handler.obtainMessage();
                             msg.obj = text;
